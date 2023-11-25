@@ -1,0 +1,37 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@mixin flex-padding($padding: 12px) {
+  padding-left: $padding;
+  padding-right: $padding;
+  padding-top: $padding;
+  padding-bottom: $padding;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+}
+
+body {
+  min-height: 100%;
+  font-family: sans-serif;
+  @include flex-padding;
+
+  .seu-container {
+    @include flex-padding;
+    max-width: 420px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(#000000, .25);
+  }
+}
